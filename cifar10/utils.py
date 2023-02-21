@@ -222,5 +222,3 @@ def test(model, optimizer, trdat, tsdat, args):
     printouts = [epoch, loss.detach().cpu().numpy(), acc.detach().cpu().numpy(), str(model[1].df.nfe / bcnt), None, test_time, (time.time()-start_time)/60]
     print(str_rec(rec_names, printouts, presets="Test || {}"))
     outlist.append(printouts)
-
-    return outlist
