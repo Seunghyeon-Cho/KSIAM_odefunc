@@ -315,7 +315,6 @@ class predictionlayer_adam(nn.Module):
 
     def forward(self, x):
         x = rearrange(x[:,0], 'b c x y -> b (c x y)')
-        import pdb; pdb.set_trace()
         x = self.dense(x)
 
         return x
